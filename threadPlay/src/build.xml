@@ -1,0 +1,76 @@
+<project name="threadPlay" default="compile_all" basedir="..">
+
+  <property name="BUILD.compiler"       value="modern"/>
+  <property name="src"                  value="src"/>
+  <property name="BUILD"                value="src/BUILD"/>
+  <property name="classes"              value="${BUILD}/classes"/>
+
+  <target name="all" depends="compile_all"/>
+
+  <target name="compile_all"
+          depends="threadPlay"/>
+
+  <target name="clean">
+       <delete dir="${BUILD}"/>
+  </target>
+
+  <!-- Prepare target directories -->
+  <target name="prepare">
+        <mkdir dir="${BUILD}"/>
+        <mkdir dir="${classes}"/>
+  </target>
+
+    <target name="prime-detector-jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/primeDetector.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="threadPlay.driver.PrimeDetectorDriver"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="persister-service-jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/persisterService.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="threadPlay.driver.PersisterDriver"/>
+            </manifest>
+        </jar>
+    </target>
+
+  <!-- ** means all subdirectories as well -->
+  <!-- * means all files in the current directory -->
+  <!-- for just java files use *.java -->
+
+  <target name="threadPlay" depends="prepare">
+    <javac includeantruntime="false" srcdir="${src}"
+	           includes="threadPlay/**"
+           excludes="**/package.html"
+           destdir="${classes}"
+           classpath="${classes}"
+           debug="on"
+           optimize="on"
+           deprecation="off"/>
+  </target>
+
+    <target name="run-DprimeDetector" depends="prime-detector-jar">
+        <java jar="${BUILD}/jar/primeDetector.jar" fork="true">
+            <arg value="${inputNumStream}"/>  <!-- Input File -->
+            <arg value="${numThreads}"/> <!-- Number of Threads -->
+            <arg value="${capacity}"/>  <!-- Capacity of the Result Class -->
+            <arg value="${persisterServiceIP}"/> <!-- Persister Service IP Address-->
+            <arg value="${persisterServicePort}"/> <!-- persister Service Port Number -->
+            <arg value="${debugValue}"/> <!--Debug Value-->
+        </java>
+    </target>
+
+    <target name="run-DpersisterService" depends="persister-service-jar">
+        <java jar="${BUILD}/jar/persisterService.jar" fork="true">
+            <arg value="${port}"/>  <!-- Port Number -->
+            <arg value="${outputNumStream}"/> <!-- Output File -->
+        </java>
+    </target>
+
+
+
+</project>
