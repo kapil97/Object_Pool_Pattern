@@ -2,5 +2,5 @@ package threadPlay.util;
 
 public interface IsPrimeI {
 
-	public int primeCheck(String number);
+	 int primeCheck(String number);
 }

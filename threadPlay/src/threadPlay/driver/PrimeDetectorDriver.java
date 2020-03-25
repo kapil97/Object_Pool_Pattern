@@ -1,4 +1,12 @@
 package threadPlay.driver;
+import threadPlay.result.ResultProcessor;
+import threadPlay.result.ResultProcessorI;
+import threadPlay.util.FileProcessor;
+import threadPlay.util.IsPrime;
+import threadPlay.util.IsPrimeI;
+import threadPlay.worker.CreateWorker;
+import threadPlay.worker.CreateWorkerI;
+
 import javax.print.attribute.standard.NumberUp;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,7 +26,7 @@ public class PrimeDetectorDriver {
 	 * takes input as command line arguments
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args){
 
 		final int REQUIRED_NUMBER_OF_ARGS = 6;
 		if ((args.length != REQUIRED_NUMBER_OF_ARGS) || 
@@ -31,7 +39,20 @@ public class PrimeDetectorDriver {
 			System.err.printf("Error: Incorrect number of arguments. Program accepts %d arguments.", REQUIRED_NUMBER_OF_ARGS);
 			System.exit(0);
 		}
-		System.out.println("Testing Ant File");
+		try {
+			FileProcessor fileProcessor=new FileProcessor(args[0]);
+			ResultProcessorI results=new ResultProcessor(Integer.parseInt(args[2]));
+			IsPrimeI isPrime=new IsPrime();
+			CreateWorkerI createWorker=new CreateWorker(fileProcessor,results,isPrime);
+			createWorker.startWorkers(Integer.parseInt(args[1]));
+		}
+		catch (IOException e){
+			e.printStackTrace();
+		}
+
+
+
+
 	}
 	@Override
 	public String toString(){

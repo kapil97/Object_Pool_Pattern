@@ -1,4 +1,5 @@
 package threadPlay.persister;
 
-public class PersisterI {
+public interface PersisterI {
+
 }

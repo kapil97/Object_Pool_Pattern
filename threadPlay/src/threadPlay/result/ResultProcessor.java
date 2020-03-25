@@ -6,7 +6,7 @@ import java.util.List;
 public class ResultProcessor implements ResultProcessorI{
     int capacity;
     int count=0;
-    ResultProcessor(int capacityIn){
+   public ResultProcessor(int capacityIn){
         capacity=capacityIn;
     }
     List<Integer> resultList=new ArrayList<>(capacity);
