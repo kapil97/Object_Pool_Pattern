@@ -14,6 +14,7 @@ public class ResultProcessor implements ResultProcessorI{
     public void addToResultList(int value){
     if(count<capacity){
         resultList.add(value);
+        count++;
     }
     else{
         //wait signal to be sent
