@@ -2,7 +2,7 @@ package threadPlay.util;
 
 public class IsPrime implements IsPrimeI{
 
-	public int primeCheck(String number)
+	public synchronized int primeCheck(String number)
 	{	
 		int num=Integer.parseInt(number);
 		boolean prime=true;

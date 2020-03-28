@@ -26,7 +26,7 @@ public final class FileProcessor {
      * @throws NumberFormatException
      * @throws IOException
      */
-    public String poll() throws NumberFormatException, IOException {
+    public synchronized String poll() throws NumberFormatException, IOException {
         if (null == line) return null;
 
         String newValue = (line.trim());
@@ -34,7 +34,7 @@ public final class FileProcessor {
         return newValue;
     }
 
-    public void close() throws IOException {
+    public synchronized void close() throws IOException {
         try {
             reader.close();
             line = null;

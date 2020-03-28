@@ -24,7 +24,7 @@
         <mkdir dir="${BUILD}/jar"/>
         <jar destfile="${BUILD}/jar/primeDetector.jar" basedir="${BUILD}/classes">
             <manifest>
-                <attribute name="Main-Class" value="threadPlay.PrimeDetectorDriver"/>
+                <attribute name="Main-Class" value="threadPlay.driver.PrimeDetectorDriver"/>
             </manifest>
         </jar>
     </target>
@@ -33,7 +33,7 @@
         <mkdir dir="${BUILD}/jar"/>
         <jar destfile="${BUILD}/jar/persisterService.jar" basedir="${BUILD}/classes">
             <manifest>
-                <attribute name="Main-Class" value="threadPlay.PersisterDriver"/>
+                <attribute name="Main-Class" value="threadPlay.driver.PersisterDriver"/>
             </manifest>
         </jar>
     </target>

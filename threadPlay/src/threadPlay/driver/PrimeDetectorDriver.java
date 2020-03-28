@@ -42,15 +42,16 @@ public class PrimeDetectorDriver {
 		try {
 			FileProcessor fileProcessor=new FileProcessor(args[0]);
 			ResultProcessorI results=new ResultProcessor(Integer.parseInt(args[2]));
+
 			IsPrimeI isPrime=new IsPrime();
 			CreateWorkerI createWorker=new CreateWorker(fileProcessor,results,isPrime);
 			createWorker.startWorkers(Integer.parseInt(args[1]));
+			results.printList();
+			System.out.println("working");
 		}
-		catch (IOException e){
+		catch (IOException | InterruptedException e){
 			e.printStackTrace();
 		}
-
-
 
 
 	}
