@@ -25,11 +25,19 @@ public class CreateWorker implements CreateWorkerI {
         System.out.println("Controlled reached here");
         WorkerThreadI workThreadI=new WorkThread(fileProcessor,isPrime,results);
         threadList=workThreadI.borrowThreads(numThreads);
+
+        
         for (Thread thread : threadList) {
             thread.start();
         }
+
+       
+
         for (Thread thread : threadList) {
             thread.join();
         }
+
+       
+
     }
 }

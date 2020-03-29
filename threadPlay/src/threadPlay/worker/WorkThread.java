@@ -33,29 +33,29 @@ public List<Thread> borrowThreads(int numThreads){
 	return pool;
 }
 public void run(){
- 	int num;
+ 	boolean primeFlag;
 	try {
 		String inputString = fileProcessor.poll();
 		System.out.println("Current string processing:"+inputString);
 		if(inputString!=null) {
-			num = prime.primeCheck(inputString);
-			if (num != 0)
-				result.addToResultList(num);
+			primeFlag = prime.primeCheck(inputString);
+			if (primeFlag)
+				result.addToResultList(Integer.parseInt(inputString));
 			while (inputString != null) {
 				inputString = fileProcessor.poll();
 				System.out.println("Current string processing:"+inputString);
 				if(inputString!=null) {
-					num = prime.primeCheck(inputString);
-					if (num != 0)
-						result.addToResultList(num);
+					primeFlag = prime.primeCheck(inputString);
+					if (primeFlag)
+						result.addToResultList(Integer.parseInt(inputString));
 				}
 				inputString = fileProcessor.poll();
 			}
 			if(inputString!=null) {
 				System.out.println("Current string processing:"+inputString);
-				num = prime.primeCheck(inputString);
-				if (num != 0)
-					result.addToResultList(num);
+				primeFlag = prime.primeCheck(inputString);
+				if (primeFlag)
+					result.addToResultList(Integer.parseInt(inputString));
 			}
 			fileProcessor.close();
 		}
