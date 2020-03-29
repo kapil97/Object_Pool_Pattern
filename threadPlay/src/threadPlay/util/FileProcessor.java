@@ -44,7 +44,6 @@ public final class FileProcessor {
     }
     @Override
     public String toString(){
-        String returnValue="File Processor Class which will process file line by line";
-        return returnValue;
+        return "File Processor Class which will process file line by line";
     }
 }

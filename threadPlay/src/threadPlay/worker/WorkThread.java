@@ -33,39 +33,20 @@ public List<Thread> borrowThreads(int numThreads){
 	return pool;
 }
 public void run(){
- 	boolean primeFlag;
-	try {
-		String inputString = fileProcessor.poll();
-		System.out.println("Current string processing:"+inputString);
-		if(inputString!=null) {
-			primeFlag = prime.primeCheck(inputString);
-			if (primeFlag)
-				result.addToResultList(Integer.parseInt(inputString));
-			while (inputString != null) {
-				inputString = fileProcessor.poll();
-				System.out.println("Current string processing:"+inputString);
-				if(inputString!=null) {
-					primeFlag = prime.primeCheck(inputString);
-					if (primeFlag)
-						result.addToResultList(Integer.parseInt(inputString));
-				}
-				inputString = fileProcessor.poll();
-			}
-			if(inputString!=null) {
-				System.out.println("Current string processing:"+inputString);
-				primeFlag = prime.primeCheck(inputString);
-				if (primeFlag)
-					result.addToResultList(Integer.parseInt(inputString));
-			}
-			fileProcessor.close();
+	try{
+		String input=fileProcessor.poll();
+		while(input!=null) {
+			boolean primeFlag=prime.primeCheck(input);
+			System.out.println("Input: "+input+" "+"PrimeFlag: "+primeFlag);
+			if(primeFlag)
+			result.addToResultList(Integer.parseInt(input));
+			input=fileProcessor.poll();
 		}
-	} catch (InvalidPathException e) {
-		System.out.println("Invalid File Path");
-	} catch (IOException | SecurityException e) {
-		System.out.println("File Cannot be read");
-	} finally {
-		System.out.println("All File Operations are Closed");
 	}
+	catch(IOException e){
+		e.printStackTrace();
+	}
+
 
 	}
 

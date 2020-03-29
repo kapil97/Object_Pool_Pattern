@@ -1,5 +1,4 @@
 package threadPlay.worker;
-
 import threadPlay.result.ResultProcessor;
 import threadPlay.result.ResultProcessorI;
 import threadPlay.util.FileProcessor;
@@ -13,7 +12,7 @@ public class CreateWorker implements CreateWorkerI {
     ResultProcessorI results;
     IsPrimeI isPrime;
 
-    List<Thread> threadList=new ArrayList();
+    List<Thread> threadList=new ArrayList<>();
     public CreateWorker(FileProcessor fpObjectIn, ResultProcessorI resultsObjIn, IsPrimeI primeObjectIn){
     fileProcessor=fpObjectIn;
     results=resultsObjIn;
@@ -25,14 +24,9 @@ public class CreateWorker implements CreateWorkerI {
         System.out.println("Controlled reached here");
         WorkerThreadI workThreadI=new WorkThread(fileProcessor,isPrime,results);
         threadList=workThreadI.borrowThreads(numThreads);
-
-        
         for (Thread thread : threadList) {
             thread.start();
         }
-
-       
-
         for (Thread thread : threadList) {
             thread.join();
         }

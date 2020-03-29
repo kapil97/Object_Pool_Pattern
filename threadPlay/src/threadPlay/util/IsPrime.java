@@ -16,11 +16,7 @@ public class IsPrime implements IsPrimeI{
 					prime = false;
 				}
 			}
-		
-			
-		
 		}
-
 		return prime;
 	}
 }

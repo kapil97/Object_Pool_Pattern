@@ -52,8 +52,6 @@ public class PrimeDetectorDriver {
 		catch (IOException | InterruptedException e){
 			e.printStackTrace();
 		}
-
-
 	}
 	@Override
 	public String toString(){
