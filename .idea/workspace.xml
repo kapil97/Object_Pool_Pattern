@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ee2d98-62bb-4aa9-b1b4-e8a221082a8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PrimeDetectorDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PrimeDetectorDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/FileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/FileProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/IsPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/IsPrime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" afterDir="false" />
     </list>

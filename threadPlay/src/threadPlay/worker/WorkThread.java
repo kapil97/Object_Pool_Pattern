@@ -1,18 +1,11 @@
 package threadPlay.worker;
-
 import threadPlay.result.ResultProcessorI;
-import threadPlay.util.IsPrime;
 import threadPlay.util.FileProcessor;
-import threadPlay.result.ResultProcessor;
 import threadPlay.util.IsPrimeI;
-
 import java.io.IOException;
-import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
 import java.util.List;
-
 public class WorkThread implements Runnable, WorkerThreadI {
-
 	IsPrimeI prime;
 	FileProcessor fileProcessor;
 	ResultProcessorI result;
@@ -22,7 +15,7 @@ public WorkThread(FileProcessor fp, IsPrimeI primeObject, ResultProcessorI resul
 	fileProcessor=fp;
 	result=resultObject;
 }
-	static List <Thread> pool;
+static List <Thread> pool;
 
 public List<Thread> borrowThreads(int numThreads){
 	pool=new ArrayList<>(numThreads);
@@ -46,8 +39,6 @@ public void run(){
 	catch(IOException e){
 		e.printStackTrace();
 	}
-
-
 	}
 
 
