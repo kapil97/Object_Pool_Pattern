@@ -42,6 +42,9 @@ public class PrimeDetectorDriver {
 		try {
 			FileProcessor fileProcessor=new FileProcessor(args[0]);
 			ResultProcessorI results=new ResultProcessor(Integer.parseInt(args[2]));
+			results.setIp(args[3]);
+			results.setPort(Integer.parseInt(args[4]));
+			results.startClient();
 
 			IsPrimeI isPrime=new IsPrime();
 			CreateWorkerI createWorker=new CreateWorker(fileProcessor,results,isPrime);

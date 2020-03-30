@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
+import threadPlay.persister.Persister;
 
 public class PersisterDriver{
     public static void main(String[] args) {
@@ -17,6 +18,10 @@ public class PersisterDriver{
             System.exit(0);
         }
         System.out.println("Testing Ant File-persister");
+
+        Persister persister = new Persister(args[1]);
+
+        persister.persisterServer(args[0]);
     }
 
     @Override
