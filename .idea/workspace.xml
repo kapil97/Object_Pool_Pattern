@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ee2d98-62bb-4aa9-b1b4-e8a221082a8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/ValidatorI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +33,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/threadPlay/src/threadPlay/util" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="threadPlay.result" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/threadPlay/src/threadPlay/util" />
     </key>
   </component>
   <component name="SvnConfiguration">

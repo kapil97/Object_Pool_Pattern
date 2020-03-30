@@ -27,5 +27,6 @@ public class CreateWorker implements CreateWorkerI {
         for (Thread thread : threadList) {
             thread.join();
         }
+        results.addToResultList("STOP");
     }
 }

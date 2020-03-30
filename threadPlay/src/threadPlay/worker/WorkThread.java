@@ -32,7 +32,7 @@ public void run(){
 			boolean primeFlag=prime.primeCheck(input);
 			System.out.println("Input: "+input+" "+"PrimeFlag: "+primeFlag);
 			if(primeFlag)
-			result.addToResultList(Integer.parseInt(input));
+			result.addToResultList(input);
 			input=fileProcessor.poll();
 		}
 	}

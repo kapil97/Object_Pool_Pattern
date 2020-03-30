@@ -1,7 +1,7 @@
 package threadPlay.result;
 
 public interface ResultProcessorI {
-     void addToResultList(int primeNo);
+     void addToResultList(String primeNo);
      void printList();
      void readDataFromList();
 }

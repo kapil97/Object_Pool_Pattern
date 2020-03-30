@@ -7,9 +7,9 @@ public class ResultProcessor implements ResultProcessorI{
    public ResultProcessor(int capacityIn){
         capacity=capacityIn;
     }
-    final List<Integer> resultList=new ArrayList<>(capacity);
+    final List<String> resultList=new ArrayList<>(capacity);
     @Override
-    public synchronized void addToResultList(int value) {
+    public synchronized void addToResultList(String value) {
         synchronized (resultList)
         {
             while (resultList.size() == capacity)
