@@ -44,7 +44,7 @@ public class PrimeDetectorDriver {
 				CreateWorkerI createWorker = new CreateWorker(fileProcessor, results, isPrime);
 				createWorker.startWorkers(Integer.parseInt(args[1]));
 				results.printList();
-			} catch (IOException | InterruptedException e) {
+			} catch (IOException  | InterruptedException e ) {
 				e.printStackTrace();
 			}
 		}

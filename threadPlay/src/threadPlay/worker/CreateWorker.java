@@ -25,7 +25,7 @@ public class CreateWorker implements CreateWorkerI {
      * @param numThreads
      */
     @Override
-    public void startWorkers(int numThreads){
+    public void startWorkers(int numThreads) throws InterruptedException{
         try {
             WorkerThreadI workThreadI = new WorkThread(fileProcessor, isPrime, results);
             threadList = workThreadI.borrowThreads(numThreads);

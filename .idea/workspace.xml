@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ee2d98-62bb-4aa9-b1b4-e8a221082a8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/persister/Persister.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/persister/Persister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/IsPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/IsPrime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/result.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/driver/PersisterDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/driver/PersisterDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/driver/PrimeDetectorDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/driver/PrimeDetectorDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/persister/ClientThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/persister/ClientThreadI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/persister/Persister.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/persister/Persister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/result/ResultProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/result/ResultProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/util/IsPrime.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/util/IsPrime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/util/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/util/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/worker/CreateWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/worker/CreateWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/worker/WorkThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/classes/threadPlay/worker/WorkThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/jar/persisterService.jar" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/BUILD/jar/persisterService.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/BUILD/jar/primeDetector.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PrimeDetectorDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PrimeDetectorDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorkerI.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorkerI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/threadPlay/src/threadPlay/util" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -65,7 +76,8 @@
       <workItem from="1585428470136" duration="9835000" />
       <workItem from="1585530458200" duration="951000" />
       <workItem from="1585593156008" duration="495000" />
-      <workItem from="1585619343404" duration="5851000" />
+      <workItem from="1585619343404" duration="6969000" />
+      <workItem from="1585626927929" duration="441000" />
     </task>
     <servers />
   </component>

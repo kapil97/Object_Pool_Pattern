@@ -24,11 +24,9 @@ compiled your code.
 ```commandline
 ant -buildfile threadPlay/src/build.xml all
 ```
-
-Description: Compiles your code and generates .class files inside the BUILD folder.
-
 -----------------------------------------------------------------------
 ## Instruction to run:
+The Server Must be Started first ie: Persister Service must be started before Prime Detector
 
 #### Use the below command to run the prime Detector.
 
@@ -49,9 +47,10 @@ ant run-DpersisterService -buildfile threadPlay/src/build.xml \
 ```
 -----------------------------------------------------------------------
 ## Description:
-
-In Progress ...
-
+This is a multi threaded program to read input from the file and check whether the number is prime or not and if prime, send it to the server using socket programming.
+Design Pattern Used: Object Pool as Thread Pool
+Communication between Client and Server is done via socket programming.<br>
+Number of Slack Days Used: 1
 -----------------------------------------------------------------------
 ### Academic Honesty statement:
 -----------------------------------------------------------------------
@@ -62,6 +61,6 @@ I am involved in plagiarism or cheating an official form will be
 submitted to the Academic Honesty Committee of the Watson School to
 determine the action that needs to be taken. "
 
-Date: 03/xx/2020
+Date: 03/30/2020
 
 
