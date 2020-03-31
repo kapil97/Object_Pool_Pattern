@@ -19,4 +19,5 @@ public class IsPrime implements IsPrimeI{
 		}
 		return prime;
 	}
+
 }

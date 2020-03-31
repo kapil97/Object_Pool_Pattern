@@ -17,7 +17,12 @@ public WorkThread(FileProcessor fp, IsPrimeI primeObject, ResultProcessorI resul
 }
 static List <Thread> pool;
 
-public List<Thread> borrowThreads(int numThreads){
+	/**
+	 * Function to borrow from thread pool
+	 * @param numThreads
+	 * @return threadList
+	 */
+	public List<Thread> borrowThreads(int numThreads){
 	pool=new ArrayList<>(numThreads);
 	for (int i=0;i<numThreads;i++) {
 		Thread thread = new Thread(new WorkThread(fileProcessor,prime,result));
@@ -25,20 +30,21 @@ public List<Thread> borrowThreads(int numThreads){
 	}
 	return pool;
 }
-public void run(){
-	try{
-		String input=fileProcessor.poll();
-		while(input!=null) {
-			boolean primeFlag=prime.primeCheck(input);
-			if(primeFlag)
-			result.addToResultList(input);
-			input=fileProcessor.poll();
+	/**
+	 * run method of the thread
+	 */
+	public void run(){
+		try{
+			String input=fileProcessor.poll();
+			while(input!=null) {
+				boolean primeFlag=prime.primeCheck(input);
+				if(primeFlag)
+				result.addToResultList(input);
+				input=fileProcessor.poll();
+			}
+		}
+		catch(IOException e){
+			e.printStackTrace();
 		}
 	}
-	catch(IOException e){
-		e.printStackTrace();
-	}
-	}
-
-
 }

@@ -4,6 +4,9 @@ import java.util.List;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
+/**
+ * Result Processing Class
+ */
 public class ResultProcessor implements ResultProcessorI{
      static int capacity;
      static String persisterIp;
@@ -15,14 +18,28 @@ public class ResultProcessor implements ResultProcessorI{
         capacity=capacityIn;
         
     }
+    /**
+     *
+     * ip Address setter
+     * @param ip
+     */
     @Override
     public void setIp(String ip){
         persisterIp=ip;
     }
+
+    /**
+     * port setter
+     * @param port
+     */
     @Override
     public void setPort(int port){
         persisterPort=port;
     }
+
+    /**
+     * Start Client
+     */
     @Override
     public void startClient()
     {
@@ -38,6 +55,11 @@ public class ResultProcessor implements ResultProcessorI{
     }
 
     final List<String> resultList=new ArrayList<>(capacity);
+
+    /**
+     * Add to Result List by acquiring Locks
+     * @param value
+     */
     @Override
     public synchronized void addToResultList(String value) {
         synchronized (resultList)
@@ -52,13 +74,16 @@ public class ResultProcessor implements ResultProcessorI{
                     e.printStackTrace();
                 }
             }
-
             resultList.add(value);
 
             resultList.notifyAll();
             readDataFromList();
         }
     }
+
+    /**
+     * Read from Result List by acquiring Locks
+     */
     @Override
     public synchronized void readDataFromList(){ 
         try
@@ -92,9 +117,16 @@ public class ResultProcessor implements ResultProcessorI{
         }
     }
 
+    /**
+     * To print the contents of the resultList and its capacity
+     */
     @Override
     public void printList(){
         System.out.println("capacity is "+capacity);
         System.out.println("printing "+resultList);
+    }
+    @Override
+    public String toString(){
+        return "ResultProcessor Class to persist result and start Connection to server";
     }
 }

@@ -11,6 +11,7 @@ public class Validator implements ValidatorI {
     String inputFileName;
     String numThreads,capacity,dPort,ipAdd;
     String persisterPort;
+
     public Validator(String dPortIn){
         persisterPort=dPortIn;
     }
@@ -21,6 +22,11 @@ public class Validator implements ValidatorI {
         ipAdd=ipAddIn;
         dPort=dportIn;
     }
+
+    /**
+     *
+     * @return if arguments for Persister are valid;
+     */
     @Override
     public boolean validPersisterService(){
         if(Integer.parseInt(persisterPort)<32768||Integer.parseInt(persisterPort)>50000){

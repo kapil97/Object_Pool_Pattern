@@ -46,4 +46,8 @@ public class Persister implements PersisterI{
 			e.printStackTrace();
 		}
 	}
+	@Override
+	public String toString(){
+		return "Persister class to perform Server Side Communication";
+	}
 }

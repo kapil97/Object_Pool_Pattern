@@ -1,5 +1,5 @@
 package threadPlay.worker;
 
 public interface CreateWorkerI {
-    void startWorkers(int numThreads) throws InterruptedException;
+    void startWorkers(int numThreads);
 }

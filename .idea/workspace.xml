@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ee2d98-62bb-4aa9-b1b4-e8a221082a8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PersisterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PersisterDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PrimeDetectorDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/driver/PrimeDetectorDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/persister/Persister.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/persister/Persister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/result/ResultProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/IsPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/IsPrime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/util/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorkerI.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/CreateWorkerI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadPlay/src/threadPlay/worker/WorkThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <workItem from="1585428470136" duration="9835000" />
       <workItem from="1585530458200" duration="951000" />
       <workItem from="1585593156008" duration="495000" />
-      <workItem from="1585619343404" duration="3312000" />
+      <workItem from="1585619343404" duration="5851000" />
     </task>
     <servers />
   </component>
@@ -87,9 +87,9 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="459" y="190" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.826@0.23.1440.826" timestamp="1585111736962" />
-    <state x="385" y="170" width="670" height="676" key="search.everywhere.popup" timestamp="1585442621569">
+    <state x="385" y="170" width="670" height="676" key="search.everywhere.popup" timestamp="1585624476097">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
-    <state x="385" y="170" width="670" height="676" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1585442621569" />
+    <state x="385" y="170" width="670" height="676" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1585624476097" />
   </component>
 </project>

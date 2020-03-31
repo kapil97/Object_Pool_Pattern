@@ -6,6 +6,9 @@ import threadPlay.util.IsPrimeI;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Create Worker Class to Start and Join threads
+ */
 public class CreateWorker implements CreateWorkerI {
     FileProcessor fileProcessor;
     ResultProcessorI results;
@@ -16,17 +19,27 @@ public class CreateWorker implements CreateWorkerI {
     results=resultsObjIn;
     isPrime=primeObjectIn;
     }
-    @Override
-    public void startWorkers(int numThreads) throws InterruptedException {
-        WorkerThreadI workThreadI=new WorkThread(fileProcessor,isPrime,results);
-        threadList=workThreadI.borrowThreads(numThreads);
-        for (Thread thread : threadList) {
-            thread.start();
-        }
 
-        for (Thread thread : threadList) {
-            thread.join();
+    /**
+     * To start WorkerThread, start the number of threads and join them
+     * @param numThreads
+     */
+    @Override
+    public void startWorkers(int numThreads){
+        try {
+            WorkerThreadI workThreadI = new WorkThread(fileProcessor, isPrime, results);
+            threadList = workThreadI.borrowThreads(numThreads);
+            for (Thread thread : threadList) {
+                thread.start();
+            }
+
+            for (Thread thread : threadList) {
+                thread.join();
+            }
+            results.addToResultList("STOP");
         }
-        results.addToResultList("STOP");
+        catch (InterruptedException e){
+            e.printStackTrace();
+        }
     }
 }
