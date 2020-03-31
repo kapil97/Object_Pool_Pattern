@@ -1,5 +1,6 @@
 package threadPlay.util;
 
 public interface ValidatorI {
-    boolean valid();
+    boolean validPrimeDetector();
+    boolean validPersisterService();
 }

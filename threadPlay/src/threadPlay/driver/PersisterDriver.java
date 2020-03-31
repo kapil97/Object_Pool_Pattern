@@ -1,14 +1,21 @@
 package threadPlay.driver;
-
-import javax.print.attribute.standard.NumberUp;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.file.InvalidPathException;
-import java.util.ArrayList;
 import threadPlay.persister.Persister;
+import threadPlay.persister.PersisterI;
+import threadPlay.util.Validator;
+import threadPlay.util.ValidatorI;
+
+/**
+ * @author Kamleshwar Ragava
+ * @author Jithin Jose
+ */
 
 public class PersisterDriver{
+    /**
+     * Main Method
+     * Command line validation happens here
+     * takes input as command line arguments
+     * @param args
+     */
     public static void main(String[] args) {
         final int REQUIRED_NUMBER_OF_ARGS = 2;
         if ((args.length != REQUIRED_NUMBER_OF_ARGS) ||
@@ -17,11 +24,13 @@ public class PersisterDriver{
             System.err.printf("Error: Incorrect number of arguments. Program accepts %d arguments.", REQUIRED_NUMBER_OF_ARGS);
             System.exit(0);
         }
-        System.out.println("Testing Ant File-persister");
-
-        Persister persister = new Persister(args[1]);
-
-        persister.persisterServer(args[0]);
+        ValidatorI validator=new Validator(args[0]);
+        if(validator.validPersisterService()) {
+            PersisterI persister = new Persister(args[1]);
+            persister.persisterServer(args[0]);
+        }
+        else
+            System.exit(0);
     }
 
     @Override

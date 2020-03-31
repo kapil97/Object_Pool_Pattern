@@ -30,7 +30,6 @@ public void run(){
 		String input=fileProcessor.poll();
 		while(input!=null) {
 			boolean primeFlag=prime.primeCheck(input);
-			System.out.println("Input: "+input+" "+"PrimeFlag: "+primeFlag);
 			if(primeFlag)
 			result.addToResultList(input);
 			input=fileProcessor.poll();

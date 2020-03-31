@@ -1,22 +1,14 @@
 package threadPlay.driver;
 import threadPlay.result.ResultProcessor;
 import threadPlay.result.ResultProcessorI;
-import threadPlay.util.FileProcessor;
-import threadPlay.util.IsPrime;
-import threadPlay.util.IsPrimeI;
+import threadPlay.util.*;
 import threadPlay.worker.CreateWorker;
 import threadPlay.worker.CreateWorkerI;
-
-import javax.print.attribute.standard.NumberUp;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.InvalidPathException;
-import java.util.ArrayList;
 
 /**
  * @author Kamleshwar Ragava
- *
+ * @author Jithin Jose
  */
 
 public class PrimeDetectorDriver {
@@ -39,21 +31,25 @@ public class PrimeDetectorDriver {
 			System.err.printf("Error: Incorrect number of arguments. Program accepts %d arguments.", REQUIRED_NUMBER_OF_ARGS);
 			System.exit(0);
 		}
-		try {
-			FileProcessor fileProcessor=new FileProcessor(args[0]);
-			ResultProcessorI results=new ResultProcessor(Integer.parseInt(args[2]));
-			results.setIp(args[3]);
-			results.setPort(Integer.parseInt(args[4]));
-			results.startClient();
+		ValidatorI validator=new Validator(args[0],args[1],args[2],args[3],args[4]);
+		if(validator.validPrimeDetector()) {
+			try {
+				FileProcessor fileProcessor = new FileProcessor(args[0]);
+				ResultProcessorI results = new ResultProcessor(Integer.parseInt(args[2]));
+				results.setIp(args[3]);
+				results.setPort(Integer.parseInt(args[4]));
+				results.startClient();
 
-			IsPrimeI isPrime=new IsPrime();
-			CreateWorkerI createWorker=new CreateWorker(fileProcessor,results,isPrime);
-			createWorker.startWorkers(Integer.parseInt(args[1]));
-			results.printList();
-			System.out.println("working");
+				IsPrimeI isPrime = new IsPrime();
+				CreateWorkerI createWorker = new CreateWorker(fileProcessor, results, isPrime);
+				createWorker.startWorkers(Integer.parseInt(args[1]));
+				results.printList();
+			} catch (IOException | InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
-		catch (IOException | InterruptedException e){
-			e.printStackTrace();
+		else {
+			System.exit(0);
 		}
 	}
 	@Override

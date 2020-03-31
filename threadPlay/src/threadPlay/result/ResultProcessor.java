@@ -11,19 +11,19 @@ public class ResultProcessor implements ResultProcessorI{
      Socket clientSocket;
      DataOutputStream data;
 
-   public ResultProcessor(int capacityIn){
+    public ResultProcessor(int capacityIn){
         capacity=capacityIn;
         
     }
-
+    @Override
     public void setIp(String ip){
         persisterIp=ip;
     }
-
+    @Override
     public void setPort(int port){
         persisterPort=port;
     }
-
+    @Override
     public void startClient()
     {
         try
@@ -31,7 +31,7 @@ public class ResultProcessor implements ResultProcessorI{
             clientSocket = new Socket(persisterIp,persisterPort);
             data = new DataOutputStream(clientSocket.getOutputStream());
         }catch(Exception e)
-        {
+        {   System.out.println("Server is not active");
             e.printStackTrace();
         }
 
@@ -83,12 +83,11 @@ public class ResultProcessor implements ResultProcessorI{
                     data.close();
                     clientSocket.close();
                 }
-                System.out.println("Consumed: " + num);
                 resultList.notifyAll();
             }
         }
         catch(Exception e)
-        {
+        {   System.out.println("Connection Error...");
             e.printStackTrace();
         }
     }
