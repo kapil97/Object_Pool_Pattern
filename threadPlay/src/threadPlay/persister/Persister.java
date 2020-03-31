@@ -10,10 +10,17 @@ import java.util.ArrayList;
 public class Persister implements PersisterI{
 	String fileOutName;
 	List<String> numList=new ArrayList<>();
+
+
 	public Persister(String outNumStream)
 	{	
 		fileOutName = outNumStream;
 	}
+
+/**
+*Activates server end of socket and writes output to file
+*@param port contains port number
+*/
 	public void persisterServer(String port)
 	{ 
 		try

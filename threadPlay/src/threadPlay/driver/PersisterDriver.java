@@ -14,6 +14,7 @@ public class PersisterDriver{
      * Main Method
      * Command line validation happens here
      * takes input as command line arguments
+     * Passes arguments to Persister 
      * @param args
      */
     public static void main(String[] args) {
